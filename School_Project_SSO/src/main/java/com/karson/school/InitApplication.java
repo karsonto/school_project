@@ -14,6 +14,7 @@ public class InitApplication  {
 		
 		//test + add pager+ Develop other
 		//test + add other 2 Develop
+		//test + feature
 	}
 	
  
