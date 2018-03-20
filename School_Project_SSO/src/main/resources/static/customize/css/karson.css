@@ -1,0 +1,27 @@
+.gitter-chat-embed-action-bar-item-collapse-chat{
+padding-top: 200px;
+}
+.gitter-chat-embed-action-bar-item-pop-out{
+padding-top: 200px;
+}
+ .gitter-open-chat-button, .gitter-open-chat-button:visited{
+ margin-bottom: 25px;
+ }
+ 
+ .pulllog-box {
+    bottom: 50px;
+    left: 230px;
+    height: 64px;
+    width: 1675px;
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(88,105,120,.9);
+}
+.pulllog-box, body #dlMask, body #loginWrap {
+    position: fixed;
+   
+}
+.pulllog-box , button{
+margin-right:10px;
+}

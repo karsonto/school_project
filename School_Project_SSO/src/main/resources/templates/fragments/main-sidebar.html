@@ -1,0 +1,45 @@
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img th:src="@{/dist/img/m800.jpg}" class="img-circle" alt="User Image"></img>
+        </div>
+        <div class="pull-left info">
+        <!--   <p th:text="${#authentication.getPrincipal().getUsername()}">..</p> -->
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search..."></input>
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu tree" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+         <li   th:classappend="${#strings.contains(#httpServletRequest.requestURI,'iuser') or #strings.contains(#httpServletRequest.requestURI,'role') ? 'treeview active menu-open':'treeview'}" >
+        <!-- sec:authorize="hasRole('user_management')" -->
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>USER MANAGEMENT</span>
+            <span class="pull-right-container">
+            <span class="label pull-right bg-green">2</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li th:classappend="${#strings.contains(#httpServletRequest.requestURI,'iuser') ? 'active':''}"><a href="/iuser/list"><i class="fa fa-circle-o"></i><span>USER</span></a></li>
+            <li th:classappend="${#strings.contains(#httpServletRequest.requestURI,'role') ? 'active':''}"><a href="/role/list"><i class="fa fa-circle-o"></i><span>ROLE</span></a></li>
+          </ul>
+        </li>
+     
+ 
+      </ul>
+    </section>
+<!-- /.sidebar -->

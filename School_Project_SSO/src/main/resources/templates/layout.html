@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+ 
+<head>
+  <meta charset="utf-8"></meta>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+  <title>Karson Test</title>
+
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"></meta>
+   <link rel="icon" th:href="@{/dist/img/favicon.ico}" type="image/x-icon"></link>
+  
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}"></link>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" th:href="@{/bower_components/font-awesome/css/font-awesome.min.css}"></link>
+  <!-- Ionicons -->
+  <link rel="stylesheet" th:href="@{/bower_components/Ionicons/css/ionicons.min.css}"></link>
+  <!-- dataTables -->
+  <link rel="stylesheet" th:href="@{/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css}"></link>
+  <!-- Theme style -->
+  <link rel="stylesheet" th:href="@{/dist/css/AdminLTE.min.css}"></link>
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" th:href="@{/dist/css/skins/_all-skins.min.css}"></link>
+  <!-- Morris chart -->
+  <link rel="stylesheet" th:href="@{/bower_components/morris.js/morris.css}"></link>
+  <!-- jvectormap -->
+  <link rel="stylesheet" th:href="@{/bower_components/jvectormap/jquery-jvectormap.css}"></link>
+  <!-- Date Picker -->
+  <link rel="stylesheet" th:href="@{/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css}"></link>
+  <!-- Daterange picker -->
+  <link rel="stylesheet" th:href="@{/bower_components/bootstrap-daterangepicker/daterangepicker.css}"></link>
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" th:href="@{/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css}"></link>
+  <link rel="stylesheet" th:href="@{/customize/css/karson.css}"></link>
+  
+  <link th:href="@{/bower_components/jsxc/css/jsxc.css}" rel="stylesheet"></link>
+  <link th:href="@{/bower_components/jsxc/css/jquery-ui.min.css}" media="all" rel="stylesheet" type="text/css" ></link>
+  <!-- icheck -->
+   <link rel="stylesheet" th:href="@{/plugins/iCheck/all.css}"></link>
+     <link rel="manifest" th:href="@{/dist/manifest.json}"></link>
+   
+  <script th:src="@{/bower_components/jquery/dist/jquery.min.js}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script th:src="@{/bower_components/jquery-ui/jquery-ui.min.js}"></script>
+ 
+
+ 
+
+
+
+ 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"></link>
+
+</head>
+
+<body class="hold-transition skin-blue-light sidebar-mini">
+<div class="wrapper">
+
+    <header class="main-header">
+        <div th:replace="fragments/header"></div>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+
+    <aside class="main-sidebar">
+        <div th:replace="fragments/main-sidebar"></div>
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header" layout:fragment="header"></section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <div layout:fragment="content"></div>
+
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 1.1
+        </div>
+        <strong>Copyright &copy; 2018 <a href="#" target="_blank">@M800</a>.</strong> All rights
+        reserved.<strong th:text="'(' +${@environment.getProperty('spring.profiles.active')}+')'"></strong>
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <div th:replace="fragments/control-sidebar"></div>
+    </aside>
+</div>
+<!-- ./wrapper -->
+
+
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script th:src="@{/bower_components/bootstrap/dist/js/bootstrap.min.js}"></script>
+<!-- Morris.js charts -->
+<script th:src="@{/bower_components/raphael/raphael.min.js}"></script>
+<script th:src="@{/bower_components/morris.js/morris.min.js}"></script>
+<!-- Sparkline -->
+<script th:src="@{/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js}"></script>
+<!-- jvectormap -->
+<script th:src="@{/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js}"></script>
+<script th:src="@{/plugins/jvectormap/jquery-jvectormap-world-mill-en.js}"></script>
+<!-- jQuery Knob Chart -->
+<script th:src="@{/bower_components/jquery-knob/dist/jquery.knob.min.js}"></script>
+<!-- daterangepicker -->
+<script th:src="@{/bower_components/moment/min/moment.min.js}"></script>
+<script th:src="@{/bower_components/bootstrap-daterangepicker/daterangepicker.js}"></script>
+<!-- datepicker -->
+<script th:src="@{/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js}"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script th:src="@{/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js}"></script>
+<!-- Slimscroll -->
+<script th:src="@{/bower_components/jquery-slimscroll/jquery.slimscroll.min.js}"></script>
+<!-- FastClick -->
+<script th:src="@{/bower_components/fastclick/lib/fastclick.js}"></script>
+<!-- AdminLTE App -->
+<script th:src="@{/dist/js/adminlte.min.js}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script th:src="@{/dist/js/pages/dashboard.js}"></script>
+<!-- AdminLTE for demo purposes -->
+<script th:src="@{/dist/js/demo.js}"></script>
+<!-- DataTables -->
+<script th:src="@{/bower_components/datatables.net/js/jquery.dataTables.min.js}"></script>
+<script th:src="@{/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js}"></script>
+<!-- Icheck -->
+<script th:src="@{/plugins/iCheck/icheck.js}"></script>
+<!-- Customize -->
+<script th:src="@{/customize/js/karson.js}"></script>
+
+</body>
+</html>
