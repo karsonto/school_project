@@ -12,7 +12,7 @@ public class InitApplication  {
 	public static void main(String[] args) {
 		SpringApplication.run(InitApplication.class, args);
 		
-		//test + add pager
+		//test + add pager+ Develop
 	}
 	
  
