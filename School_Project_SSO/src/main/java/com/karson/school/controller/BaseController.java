@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class BaseController {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
-	 @Value("${key.auth}")
+	 @Value("${key.config.auth}")
     private  String  logoutUrl ;
     @Value("${server.context-path}")
     private String path ;
@@ -36,6 +36,9 @@ public class BaseController {
 		return "home/index";
 		
 	}
+	/*
+	 * 登出系统清空cookies and session id
+	 * **/
 	 @RequestMapping("/logout")
 	    public String logout(HttpServletRequest request, HttpServletResponse response) {
 		 logger.info(logoutUrl);
