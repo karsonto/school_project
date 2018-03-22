@@ -24,10 +24,10 @@ public class WebmagicApplicationTests {
 
 	@Test
 	 public void test() {
-//		System.out.println(key);
-//		Role role = new Role();
-//		role.setRolename("karson");
-//		 roleDao.save(role);
+		System.out.println(key);
+		Role role = new Role();
+		role.setRolename("karson2");
+		 roleDao.save(role);
 		 
 		
 	}
